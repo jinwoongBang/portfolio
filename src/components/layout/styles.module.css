@@ -1,0 +1,7 @@
+.main {
+  @apply border border-red-600;
+}
+
+.main div {
+  @apply border border-red-600;
+}
