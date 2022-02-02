@@ -4,6 +4,8 @@ import Image from 'next/image';
 import type { LayoutProps } from 'src/components/layout/type';
 
 import Logo from 'public/mix_crop.png';
+import Instagram from 'public/instagram.png';
+import Github from 'public/github.png';
 import styles from 'src/components/layout/styles.module.css';
 
 function Layout({ children }: LayoutProps) {
@@ -22,10 +24,23 @@ function Layout({ children }: LayoutProps) {
       </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
-        <nav>
-          <a href="">Instagram</a>
-          <a href="">GitHub</a>
+        <nav className={styles['footer__nav']}>
+          <Image
+            className={styles['footer__nav--item']}
+            src={Instagram}
+            alt="Instagram"
+            width={20}
+            height={20}
+          />
+          <Image
+            className={styles['footer__nav--item']}
+            src={Github}
+            alt="GitHub"
+            width={20}
+            height={20}
+          />
         </nav>
+        <div className={styles['footer__bar']}></div>
       </footer>
     </div>
   );

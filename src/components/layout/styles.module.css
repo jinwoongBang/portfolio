@@ -40,5 +40,20 @@
 }
 
 .footer {
-  @apply fixed bottom-0 border border-white;
+  @apply fixed bottom-0 left-10
+  flex
+  flex-col
+  items-center
+  w-10 h-60;
+}
+
+.footer__nav {
+  @apply flex flex-col items-center opacity-30;
+}
+.footer__nav--item {
+  @apply p-2;
+}
+
+.footer__bar {
+  @apply w-0 h-full border border-gray-500/50;
 }
