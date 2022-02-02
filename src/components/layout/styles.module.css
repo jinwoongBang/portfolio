@@ -3,18 +3,21 @@
 }
 
 .main > div {
-  @apply p-4 border border-white;
-  /* height: 1000px; */
+  @apply mt-20 p-4
+  /* border border-white */;
+  height: 1000px;
   /* @apply border border-red-600; */
 }
 
 .header {
-  @apply sticky top-0
+  @apply sticky 
+    z-10 top-0
     p-4 
     flex justify-between items-center
     bg-my-dark
-    shadow-md
-    shadow-black;
+    drop-shadow
+    /* shadow
+    shadow-gray-800; */;
 }
 
 .nav {

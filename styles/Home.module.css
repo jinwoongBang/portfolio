@@ -19,3 +19,40 @@
   width: 20rem;
   height: 20rem;
 }
+
+.greetings-container {
+  @apply col-span-1 text-6xl;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.duty-container {
+  @apply col-span-1 text-2xl font-thin;
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: flex-start; */
+}
+.duty-container__text > ul {
+  /* @apply border border-white; */
+}
+
+.about-container {
+  @apply col-span-1 flex items-end;
+}
+.about-container__button {
+  @apply relative
+  w-3/4 h-3/4 
+  text-2xl
+  border border-my-primary;
+}
+.about-container__button::after {
+  @apply bg-my-secondary;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+}
