@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+  @apply bg-my-dark text-my-gray;
+  font-family: 'Noto Sans KR', sans-serif;
+}

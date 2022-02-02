@@ -6,7 +6,7 @@ import styles from 'src/components/layout/styles.module.css';
 
 function Layout({ children }: LayoutProps) {
   return (
-    <div className="">
+    <div>
       <header>
         <nav>
           <a>About</a>
