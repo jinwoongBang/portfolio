@@ -1,7 +1,41 @@
 .main {
-  @apply border border-red-600;
+  /* @apply border border-red-600; */
 }
 
 .main div {
-  @apply border border-red-600;
+  @apply p-4 border border-white;
+  /* height: 1000px; */
+  /* @apply border border-red-600; */
+}
+
+.header {
+  @apply sticky top-0
+    p-4 
+    flex justify-between items-center
+    bg-my-dark
+    shadow-md
+    shadow-black;
+}
+
+.nav {
+  @apply grid grid-cols-4 text-center;
+}
+
+.nav a {
+  @apply transition-all;
+  /* @apply border border-red-700; */
+}
+
+.nav a:hover {
+  @apply text-white;
+}
+
+.logo-container {
+  @apply relative;
+  width: 40px;
+  height: 40px;
+}
+
+.footer {
+  @apply fixed bottom-0 border border-white;
 }
