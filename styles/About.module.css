@@ -1,0 +1,18 @@
+.career-list {
+  @apply flex flex-col justify-evenly
+  ml-10
+  h-full;
+}
+.career-list li {
+  @apply relative flex;
+}
+.career-list li::before {
+  @apply bg-my-dark border border-my-primary rounded;
+  position: absolute;
+  top: 5px;
+  left: -44px;
+  width: 8px;
+  height: 8px;
+
+  content: '';
+}
