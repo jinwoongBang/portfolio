@@ -1,6 +1,14 @@
+/**
+ * Nextjs
+ */
 import type { NextPage } from 'next';
 
-function About() {
+/**
+ * Styles
+ */
+import styles from 'styles/About.module.css';
+
+const About: NextPage = () => {
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-2">
@@ -13,6 +21,6 @@ function About() {
       </div>
     </div>
   );
-}
+};
 
 export default About;
