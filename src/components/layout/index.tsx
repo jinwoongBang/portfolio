@@ -5,6 +5,7 @@ import React, { useCallback } from 'react';
  */
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 /**
  * Library
@@ -19,28 +20,33 @@ import Github from 'public/github.png';
 import styles from 'src/components/layout/styles.module.css';
 
 function Layout({ children }: LayoutProps) {
-  const router = useRouter();
-
-  const handleClickLogo = useCallback(() => {
-    router.push('./');
-  }, []);
-
   return (
-    <div>
+    <div className="animate-bounce">
       <header className={styles.header}>
         <div className={styles['logo-container']}>
-          <Image
-            src={Logo}
-            alt="Empty Logo"
-            // layout="fill"
-            onClick={handleClickLogo}
-          />
+          <Link href="/">
+            <a>
+              <Image
+                src={Logo}
+                alt="Empty Logo"
+                // layout="fill"
+              />
+            </a>
+          </Link>
         </div>
         <nav className={styles.nav}>
-          <a href="./about">About</a>
-          <a href="./skills">Skills</a>
-          <a href="./work">Work</a>
-          <a href="./trouble">Trouble Shooting</a>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
+          <Link href="/skills">
+            <a>Skills</a>
+          </Link>
+          <Link href="/work">
+            <a>Work</a>
+          </Link>
+          <Link href="/trouble">
+            <a>Trouble Shooting</a>
+          </Link>
         </nav>
       </header>
       <main className={styles.main}>{children}</main>

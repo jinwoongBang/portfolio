@@ -22,7 +22,7 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-20">
       <article className="grid grid-cols-2 gap-4">
         <section className="col-span-1">
           <div className={styles['image-container']}>

@@ -3,7 +3,7 @@
 }
 
 .main > div {
-  @apply mt-20 p-4
+  @apply p-4
   /* border border-white */;
   height: 1000px;
   /* @apply border border-red-600; */
