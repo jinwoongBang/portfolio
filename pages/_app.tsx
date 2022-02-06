@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       setTimeout(() => {
         NProgress.done();
         setIsLoading(false);
-      }, 1000);
+      }, 500);
     };
 
     router.events.on('routeChangeStart', handleStart);
