@@ -1,5 +1,14 @@
+/**
+ * React
+ */
+import { useCallback } from 'react';
+
+/**
+ * Next js
+ */
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import Logo from 'public/mix_crop.png';
 import Me from 'public/me.png';
@@ -7,6 +16,11 @@ import Me from 'public/me.png';
 import styles from 'styles/Home.module.css';
 
 const Home: NextPage = () => {
+  const router = useRouter();
+  const handleClickAboutButton = useCallback(() => {
+    router.push('./about');
+  }, []);
+
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-2 gap-4">
@@ -35,7 +49,10 @@ const Home: NextPage = () => {
           </ul>
         </div>
         <div className={styles['about-container']}>
-          <button className={styles['about-container__button']}>
+          <button
+            className={styles['about-container__button']}
+            onClick={handleClickAboutButton}
+          >
             About Me
           </button>
         </div>

@@ -8,3 +8,7 @@ body {
   @apply bg-my-dark text-my-gray;
   font-family: 'Noto Sans KR', sans-serif;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}

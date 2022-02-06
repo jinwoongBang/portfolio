@@ -38,6 +38,10 @@
   width: 40px;
   height: 40px;
 }
+.logo-container:hover {
+  @apply drop-shadow-lg;
+  cursor: pointer;
+}
 
 .footer {
   @apply fixed bottom-0 left-10
