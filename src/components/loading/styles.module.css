@@ -1,0 +1,20 @@
+@keyframes animate-scale {
+  0% {
+    /* transform: scale(0); */
+    opacity: 0;
+  }
+  100% {
+    /* transform: scale(1); */
+    opacity: 1;
+  }
+}
+
+.root {
+  @apply flex flex-col
+
+  justify-center items-center
+  /* animate-ping */
+  h-[100vh];
+
+  animation: animate-scale 0.4s ease-out;
+}

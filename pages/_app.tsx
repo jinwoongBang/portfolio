@@ -24,6 +24,7 @@ import Layout from 'src/components/layout';
  * asset
  */
 import Logo from 'public/mix_crop.png';
+import Loading from 'src/components/loading';
 
 NProgress.configure({
   // minimum: 0.5,
@@ -61,16 +62,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router]);
 
   return isLoading ? (
-    <div className="flex flex-col h-[100vh] justify-center items-center">
-      <Image
-        src={Logo}
-        alt="Empty Logo"
-        width={50}
-        height={50}
-        // layout="fill"
-      />
-      <h1 className="mt-4">Loading</h1>
-    </div>
+    <Loading />
   ) : (
     <Layout>
       <Component {...pageProps} />

@@ -10,9 +10,9 @@ import styles from 'styles/About.module.css';
 
 const About: NextPage = () => {
   return (
-    <div className="container mx-auto">
+    <div className={styles['root-container']}>
       <section className="grid grid-cols-2">
-        <article className="col-span-1 text-right p-4 h-[80vh] flex flex-col justify-center">
+        <article className={styles['description-container']}>
           <h1 className="text-4xl font-extrabold text-my-primary">About Me</h1>
           <p className="text-lg">
             Hello, this is Front-End developer Jinwoong Bang.
