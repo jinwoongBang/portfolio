@@ -1,19 +1,32 @@
 import type { NextPage } from 'next';
 
+import styles from 'styles/Skills.module.css';
+
 function Skills() {
   return (
-    <div className="container mx-auto border">
-      <div className="grid grid-rows-2 grid-cols-4 grid-flow-col">
-        <div className="row-span-1 col-span-3 border">
-          <h1>[skill] 왼쪽 상단 레이아아웃</h1>
-        </div>
-        <div className="row-span-1 col-span-3 border">
-          <h1>[skill] 왼쪽 하단 레이아아웃</h1>
-        </div>
-        <div className="row-span-2 col-span-1 border">
-          <h1>[skill] 오른쪽 레이아아웃</h1>
-        </div>
-      </div>
+    <div className="container mx-auto">
+      <section className="grid grid-rows-2 grid-cols-4 grid-flow-col">
+        <article className={styles['title-container']}>
+          <h1 className={styles['title']}>Skills</h1>
+        </article>
+        <article className={styles['skill-tree-container']}>
+          <h1>스킬트리가 들어갈 자리</h1>
+        </article>
+        <aside className={styles['skill-container']}>
+          <div className={styles['skill-item']}>
+            <span className={styles['skill-item__icon']}>Icon</span>
+            <h2>Front-End</h2>
+          </div>
+          <div className={styles['skill-item']}>
+            <span className={styles['skill-item__icon']}>Icon</span>
+            <h2>Back-End</h2>
+          </div>
+          <div className={styles['skill-item']}>
+            <span className={styles['skill-item__icon']}>Icon</span>
+            <h2>Design</h2>
+          </div>
+        </aside>
+      </section>
     </div>
   );
 }
