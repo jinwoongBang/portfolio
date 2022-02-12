@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Hexagon from 'src/components/Hexagon';
 
 import styles from 'styles/Skills.module.css';
 
@@ -10,7 +11,13 @@ function Skills() {
           <h1 className={styles['title']}>Skills</h1>
         </article>
         <article className={styles['skill-tree-container']}>
-          <h1>스킬트리가 들어갈 자리</h1>
+          <div className="flex border">
+            <Hexagon />
+            <Hexagon />
+            <Hexagon />
+            <Hexagon />
+            <Hexagon />
+          </div>
         </article>
         <aside className={styles['skill-container']}>
           <div className={styles['skill-item']}>

@@ -1,19 +1,19 @@
 .title-container {
   @apply row-span-1 col-span-3
-  /* border; */;
+  border;
 }
 .title {
-  @apply text-white text-4xl;
+  @apply text-white text-5xl;
 }
 
 .skill-tree-container {
   @apply row-span-1 col-span-3
-  /* border; */;
+  border;
 }
 
 .skill-container {
   @apply row-span-2 col-span-1
-  p-4
+  px-4
   /* border; */;
 }
 .skill-item {
