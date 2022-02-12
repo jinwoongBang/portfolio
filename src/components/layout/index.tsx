@@ -43,9 +43,11 @@ function Layout({ children }: JWComponent.LayoutProps) {
           {navigationList.map((navigation) => (
             <Link key={navigation.url} href={navigation.url}>
               <a
-                className={clsx(styles['header__navigation-item'], {
-                  'header__navigation-item--selected': true,
-                })}
+                className={clsx(
+                  styles['header__navigation-item'],
+                  router.pathname === navigation.url &&
+                    styles['header__navigation-item--selected'],
+                )}
               >
                 {navigation.label}
               </a>

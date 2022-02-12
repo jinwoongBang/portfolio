@@ -31,12 +31,13 @@
 }
 
 .header__navigation {
-  @apply grid grid-cols-4 text-center;
+  @apply grid grid-cols-4;
 }
 
 .header__navigation-item {
-  @apply transition-all;
-  /* @apply border border-red-700; */
+  @apply flex flex-col
+  justify-between items-center
+  transition-all;
 }
 
 .header__navigation-item:hover {
@@ -44,7 +45,18 @@
 }
 
 .header__navigation-item--selected {
-  @apply text-white;
+  @apply flex
+  text-white;
+}
+.header__navigation-item--selected::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+
+  background-color: #5571fd;
+
+  border: 1px solid #5571fd;
+  border-radius: 20px;
 }
 
 .logo-container {
