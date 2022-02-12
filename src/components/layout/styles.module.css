@@ -30,16 +30,20 @@
     shadow-gray-800; */;
 }
 
-.nav {
+.header__navigation {
   @apply grid grid-cols-4 text-center;
 }
 
-.nav-item {
+.header__navigation-item {
   @apply transition-all;
   /* @apply border border-red-700; */
 }
 
-.nav-item:hover {
+.header__navigation-item:hover {
+  @apply text-white;
+}
+
+.header__navigation-item--selected {
   @apply text-white;
 }
 
