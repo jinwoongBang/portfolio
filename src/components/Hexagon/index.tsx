@@ -4,17 +4,35 @@ import { useMemo } from 'react';
 import styles from 'src/components/Hexagon/styles.module.css';
 import { calculateHexagonSize, PolygonSize } from './PointUtils';
 
-function Hexagon({ size = 'md' }: JWComponent.HexagonProps) {
+interface ColorChipType {
+  [key: string | JWComponent.PolygonSizeProps]: any;
+}
+
+function Hexagon({
+  size = 'md',
+  label,
+  color = 'primary',
+}: JWComponent.HexagonProps) {
   const { width, height, points }: PolygonSize = useMemo(() => {
     return calculateHexagonSize[size]();
   }, [size]);
+
+  const fill = useMemo(() => {
+    const colorChip: ColorChipType = {
+      primary: '#5571FD',
+      secondary: '#C2306C',
+      gray: '#848484',
+    };
+
+    return colorChip[color as JWComponent.PolygonSizeProps];
+  }, [color]);
 
   return (
     <svg width={width} height={height} className={styles.root}>
       <polygon
         points={points.valueOfString()}
         stroke="#ffffff"
-        fill="#5571FD"
+        fill={fill}
         strokeWidth="1"
       />
       <text
@@ -24,7 +42,7 @@ function Hexagon({ size = 'md' }: JWComponent.HexagonProps) {
         dominantBaseline="middle"
         className={styles.text}
       >
-        cat
+        {label}
       </text>
     </svg>
   );

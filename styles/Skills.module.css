@@ -7,18 +7,22 @@
 }
 
 .skill-tree-container {
-  @apply row-span-1 col-span-3
+  @apply row-span-5 col-span-3
   border;
 }
 
 .skill-container {
-  @apply row-span-2 col-span-1
+  @apply row-span-6 col-span-1
   px-4
   /* border; */;
 }
 .skill-item {
-  @apply flex items-center;
+  @apply flex justify-center items-center
+  mb-3;
 }
 .skill-item__icon {
   @apply mr-4;
+}
+.skill-item__title {
+  @apply w-24 text-center;
 }

@@ -1,6 +1,6 @@
 .root {
-  @apply border;
-  transform: scale(1);
+  /* @apply border;
+  transform: scale(1); */
 }
 
 .text {

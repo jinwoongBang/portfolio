@@ -40,7 +40,7 @@ export class Points {
 
 export const calculateHexagonSize: CalculateHexagonSizeType = {
   xs: (): PolygonSize => {
-    const scale = 0.5;
+    const scale = 0.3;
     return {
       width: 90 * scale,
       height: 100 * scale,
