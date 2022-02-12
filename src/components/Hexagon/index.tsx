@@ -2,42 +2,17 @@ import * as React from 'react';
 import { useMemo } from 'react';
 
 import styles from 'src/components/Hexagon/styles.module.css';
-
-type Point = `${number} ${number}`;
-type PolygonSize = {
-  width: number;
-  height: number;
-  points: Array<Point>;
-};
-
-interface CalcSizeType {
-  [key: string | JWComponent.PolygonSizeProps]: () => PolygonSize;
-}
-
-const calcSize: CalcSizeType = {
-  md: (): PolygonSize => {
-    return {
-      width: 90,
-      height: 100,
-      points: ['45 0', '90 25', '90 75', '45 100', '0 75', '0 25'],
-    };
-  },
-};
+import { calculateHexagonSize, PolygonSize } from './PointUtils';
 
 function Hexagon({ size = 'md' }: JWComponent.HexagonProps) {
   const { width, height, points }: PolygonSize = useMemo(() => {
-    return calcSize[size]();
+    return calculateHexagonSize[size]();
   }, [size]);
 
   return (
-    <svg
-      width={width}
-      height={height}
-      className={styles.root}
-      //   style={{ transform: 'scale(0.4)' }}
-    >
+    <svg width={width} height={height} className={styles.root}>
       <polygon
-        points={points.join(', ')}
+        points={points.valueOfString()}
         stroke="#ffffff"
         fill="#5571FD"
         strokeWidth="1"
