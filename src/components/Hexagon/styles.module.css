@@ -1,3 +1,8 @@
+.root {
+  @apply border;
+  transform: scale(1);
+}
+
 .text {
   fill: white;
   font: bold 30px sans-serif;

@@ -11,7 +11,7 @@ function Skills() {
           <h1 className={styles['title']}>Skills</h1>
         </article>
         <article className={styles['skill-tree-container']}>
-          <div className="flex border">
+          <div className="flex border" style={{ transform: 'scale(1)' }}>
             <Hexagon />
             <Hexagon />
             <Hexagon />
@@ -21,7 +21,9 @@ function Skills() {
         </article>
         <aside className={styles['skill-container']}>
           <div className={styles['skill-item']}>
-            <span className={styles['skill-item__icon']}>Icon</span>
+            <span className={styles['skill-item__icon']}>
+              <Hexagon />
+            </span>
             <h2>Front-End</h2>
           </div>
           <div className={styles['skill-item']}>
