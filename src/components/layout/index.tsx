@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 
 /**
  * Next
@@ -12,41 +12,39 @@ import Link from 'next/link';
  */
 import clsx from 'clsx';
 
-import type { LayoutProps } from 'src/components/layout/type';
+import { PageURL } from 'src/commons/enum';
 
 import Logo from 'public/mix_crop.png';
 import Instagram from 'public/instagram.png';
 import Github from 'public/github.png';
 import styles from 'src/components/layout/styles.module.css';
 
-function Layout({ children }: LayoutProps) {
+const navigationList: Array<JWComponent.HeaderNavigation> = [
+  { label: 'About', url: PageURL.About },
+  { label: 'Skills', url: PageURL.Skills },
+  { label: 'Work', url: PageURL.Work },
+  { label: 'Troubleshooting', url: PageURL.Troubleshooting },
+];
+
+function Layout({ children }: JWComponent.LayoutProps) {
+  const router = useRouter();
+
   return (
     <div className="animate-bounce">
       <header className={styles.header}>
         <div className={styles['logo-container']}>
           <Link href="/">
             <a>
-              <Image
-                src={Logo}
-                alt="Empty Logo"
-                // layout="fill"
-              />
+              <Image src={Logo} alt="Empty Logo" />
             </a>
           </Link>
         </div>
         <nav className={styles.nav}>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-          <Link href="/skills">
-            <a>Skills</a>
-          </Link>
-          <Link href="/work">
-            <a>Work</a>
-          </Link>
-          <Link href="/trouble">
-            <a>Trouble Shooting</a>
-          </Link>
+          {navigationList.map((navigation) => (
+            <Link key={navigation.url} href={navigation.url}>
+              <a className={clsx(styles['nav-item'], {})}>{navigation.label}</a>
+            </Link>
+          ))}
         </nav>
       </header>
       <main className={styles.main}>{children}</main>

@@ -34,12 +34,12 @@
   @apply grid grid-cols-4 text-center;
 }
 
-.nav a {
+.nav-item {
   @apply transition-all;
   /* @apply border border-red-700; */
 }
 
-.nav a:hover {
+.nav-item:hover {
   @apply text-white;
 }
 

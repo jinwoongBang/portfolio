@@ -1,5 +1,10 @@
-import { ReactNode } from 'react';
+namespace JWComponent {
+  type LayoutProps = {
+    children: React.ReactNode;
+  };
 
-export type LayoutProps = {
-  children: ReactNode;
-};
+  type HeaderNavigation = {
+    label: string;
+    url: import('src/commons/enum').PageURL;
+  };
+}
