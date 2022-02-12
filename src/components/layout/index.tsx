@@ -20,10 +20,11 @@ import Github from 'public/github.png';
 import styles from 'src/components/layout/styles.module.css';
 
 const navigationList: Array<JWComponent.HeaderNavigation> = [
-  { label: 'About', url: PageURL.About },
-  { label: 'Skills', url: PageURL.Skills },
-  { label: 'Work', url: PageURL.Work },
-  { label: 'Troubleshooting', url: PageURL.Troubleshooting },
+  // { label: 'HOME', url: PageURL.About },
+  { label: 'ABOUT', url: PageURL.About },
+  { label: 'SKILLS', url: PageURL.Skills },
+  { label: 'WORK', url: PageURL.Work },
+  { label: 'TROUBLESHOOTING', url: PageURL.Troubleshooting },
 ];
 
 function Layout({ children }: JWComponent.LayoutProps) {
