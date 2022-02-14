@@ -12,11 +12,7 @@ function Skills() {
         </article>
         <article className={styles['skill-tree-container']}>
           <div className="flex border" style={{ transform: 'scale(1)' }}>
-            <Hexagon label="React" />
-            <Hexagon label="React" />
-            <Hexagon label="React" />
-            <Hexagon label="React" />
-            <Hexagon label="React" />
+            <Hexagon labels={['Form', 'Login']} />
           </div>
         </article>
         <aside className={styles['skill-container']}>

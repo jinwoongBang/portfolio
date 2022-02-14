@@ -3,7 +3,7 @@ namespace JWComponent {
   type PolygonColorProps = 'primary' | 'secondary' | 'gray';
   type HexagonProps = {
     size?: PolygonSizeProps;
-    label?: string;
+    labels?: string[];
     color?: PolygonColorProps;
   };
 }
