@@ -11,8 +11,38 @@ function Skills() {
           <h1 className={styles['title']}>Skills</h1>
         </article>
         <article className={styles['skill-tree-container']}>
-          <div className="flex border" style={{ transform: 'scale(1)' }}>
+          <div className="flex pl-[46.5px] h-[78.5px] ">
             <Hexagon labels={['Form', 'Login']} />
+            <Hexagon className="invisible" />
+            <Hexagon className="invisible" />
+            <Hexagon className="invisible" />
+            <Hexagon labels={['ChartJS']} color="secondary" />
+          </div>
+          <div className="flex h-[78.5px]">
+            <Hexagon labels={['JWT']} />
+            <Hexagon labels={['Spring', 'Security']} />
+            <Hexagon labels={['Spring5']} />
+            <Hexagon labels={['JSP']} color="gradient" />
+            <Hexagon labels={['Jquery']} color="secondary" />
+          </div>
+          <div className="flex pl-[46.5px] h-[78.5px] ">
+            <Hexagon className="invisible" />
+            <Hexagon labels={['Spring', 'Boot']} />
+            <Hexagon labels={['Java']} />
+            <Hexagon labels={['Javascript']} color="gradient" />
+          </div>
+          <div className="flex h-[78.5px]">
+            <Hexagon labels={['SQL']} />
+            <Hexagon labels={['MyBatis']} />
+            <Hexagon labels={['SOAP']} />
+            <Hexagon labels={['RESTful', 'API']} color="gradient" />
+            <Hexagon labels={['Jquery']} color="secondary" />
+          </div>
+          <div className="flex pl-[46.5px] h-[78.5px] ">
+            <Hexagon className="invisible" />
+            <Hexagon className="invisible" />
+            <Hexagon className="invisible" />
+            <Hexagon labels={['JSON']} color="gradient" />
           </div>
         </article>
         <aside className={styles['skill-container']}>

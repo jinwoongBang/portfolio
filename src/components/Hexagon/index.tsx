@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import * as React from 'react';
 import { useMemo } from 'react';
 
@@ -12,6 +13,7 @@ function Hexagon({
   size = 'md',
   labels,
   color = 'primary',
+  className = '',
 }: JWComponent.HexagonProps) {
   const { width, height, points }: PolygonSize = useMemo(() => {
     return calculateHexagonSize[size]();
@@ -22,6 +24,7 @@ function Hexagon({
       primary: '#5571FD',
       secondary: '#C2306C',
       gray: '#848484',
+      gradient: 'url(#grad1)',
     };
 
     return colorChip[color as JWComponent.PolygonSizeProps];
@@ -52,13 +55,17 @@ function Hexagon({
   }, [labels]);
 
   return (
-    <svg width={width} height={height} className={styles.root}>
-      <polygon
-        points={points.valueOfString()}
-        stroke="#ffffff"
-        fill={fill}
-        strokeWidth="1"
-      />
+    <svg width={width} height={height} className={clsx(styles.root, className)}>
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style={{ stopColor: '#5571FD', stopOpacity: 1 }} />
+          <stop
+            offset="100%"
+            style={{ stopColor: '#C2306C', stopOpacity: 1 }}
+          />
+        </linearGradient>
+      </defs>
+      <polygon points={points.valueOfString()} fill={fill} />
 
       {labels?.map((label: string, index) => {
         const y = startPosition + index * 20;
