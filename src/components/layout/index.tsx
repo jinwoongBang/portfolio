@@ -31,7 +31,7 @@ function Layout({ children }: JWComponent.LayoutProps) {
   const router = useRouter();
 
   return (
-    <div className="animate-bounce">
+    <div className="">
       <header className={styles.header}>
         <div className={styles['logo-container']}>
           <Link href="/">

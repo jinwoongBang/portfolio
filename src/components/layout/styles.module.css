@@ -8,8 +8,8 @@
 }
 
 .main {
+  @apply flex justify-center;
   animation: animate-opacity 1s ease-in-out;
-  /* @apply border border-red-600; */
 }
 
 .main > div {
@@ -28,6 +28,7 @@
     drop-shadow
     /* shadow
     shadow-gray-800; */;
+  height: 75px;
 }
 
 .header__navigation {
