@@ -49,7 +49,7 @@ function Layout({ children }: JWComponent.LayoutProps) {
                 className={clsx(
                   styles['header__navigation-item'],
                   router.pathname === navigation.url &&
-                  styles['header__navigation-item--selected'],
+                    styles['header__navigation-item--selected'],
                 )}
               >
                 {navigation.label}
@@ -65,29 +65,17 @@ function Layout({ children }: JWComponent.LayoutProps) {
       <footer className={styles.footer}>
         <nav className={styles['footer__nav']}>
           <ol>
-            <li
-              className={styles['footer__nav--item']}>
+            <li className={styles['footer__nav--item']}>
               <Link href="https://jwbang.notion.site/42d85a5b0ba04e76a6c0e19230058af1">
-                <Image
-                  src={Notion}
-                  alt="Notion"
-                  width={20}
-                  height={20}
-                />
+                <Image src={Notion} alt="Notion" width={20} height={20} />
               </Link>
             </li>
-            <li
-              className={styles['footer__nav--item']}>
+            <li className={styles['footer__nav--item']}>
               <Link href="https://github.com/jinwoongBang">
-                <Image
-                  src={Github}
-                  alt="GitHub"
-                  width={20}
-                  height={20}
-                /></Link>
+                <Image src={Github} alt="GitHub" width={20} height={20} />
+              </Link>
             </li>
           </ol>
-
         </nav>
         <div className={styles['footer__bar']}></div>
       </footer>
