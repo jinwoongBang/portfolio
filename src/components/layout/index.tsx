@@ -11,11 +11,13 @@ import Link from 'next/link';
  * Library
  */
 import clsx from 'clsx';
+import { MenuIcon } from '@heroicons/react/solid';
 
 import { PageURL } from 'src/commons/enum';
 
 import Logo from 'public/mix_crop.png';
-import Instagram from 'public/instagram.png';
+import Notion from 'public/notion-logo.svg';
+// import Instagram from 'public/instagram.png';
 import Github from 'public/github.png';
 import styles from 'src/components/layout/styles.module.css';
 
@@ -47,7 +49,7 @@ function Layout({ children }: JWComponent.LayoutProps) {
                 className={clsx(
                   styles['header__navigation-item'],
                   router.pathname === navigation.url &&
-                    styles['header__navigation-item--selected'],
+                  styles['header__navigation-item--selected'],
                 )}
               >
                 {navigation.label}
@@ -55,24 +57,37 @@ function Layout({ children }: JWComponent.LayoutProps) {
             </Link>
           ))}
         </nav>
+        <nav className={styles['header__navigation__mobile']}>
+          <MenuIcon width={30} height={30} />
+        </nav>
       </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
         <nav className={styles['footer__nav']}>
-          <Image
-            className={styles['footer__nav--item']}
-            src={Instagram}
-            alt="Instagram"
-            width={20}
-            height={20}
-          />
-          <Image
-            className={styles['footer__nav--item']}
-            src={Github}
-            alt="GitHub"
-            width={20}
-            height={20}
-          />
+          <ol>
+            <li
+              className={styles['footer__nav--item']}>
+              <Link href="https://jwbang.notion.site/42d85a5b0ba04e76a6c0e19230058af1">
+                <Image
+                  src={Notion}
+                  alt="Notion"
+                  width={20}
+                  height={20}
+                />
+              </Link>
+            </li>
+            <li
+              className={styles['footer__nav--item']}>
+              <Link href="https://github.com/jinwoongBang">
+                <Image
+                  src={Github}
+                  alt="GitHub"
+                  width={20}
+                  height={20}
+                /></Link>
+            </li>
+          </ol>
+
         </nav>
         <div className={styles['footer__bar']}></div>
       </footer>
