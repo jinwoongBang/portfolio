@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       className="container flex items-center"
       style={{ height: `calc(100vh - 75px)` }}
     >
-      <section className="grid grid-cols-2 gap-4 w-full">
+      <section className="md:grid md:grid-cols-2 gap-4 w-full lg:grid lg:grid-flow-row">
         <article className="col-span-1">
           <div className={styles['image-container']}>
             <div className={styles['image-container__logo']}>
