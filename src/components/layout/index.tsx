@@ -59,13 +59,13 @@ function Layout({ children }: JWComponent.LayoutProps) {
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
         <nav className={styles['footer__nav']}>
-          <Image
+          {/* <Image
             className={styles['footer__nav--item']}
             src={Instagram}
             alt="Instagram"
             width={20}
             height={20}
-          />
+          /> */}
           <Image
             className={styles['footer__nav--item']}
             src={Github}
